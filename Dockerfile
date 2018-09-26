@@ -10,6 +10,8 @@ ENV JAVA_VERSION 8u162
 ENV JAVA_BUILD 8u162-b12
 ENV JAVA_DL_HASH 0da788060d494f5095bf8624735fa2f1 
 
+RUN yum install wget tar
+
 RUN wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" \
  http://download.oracle.com/otn-pub/java/jdk/${JAVA_BUILD}/${JAVA_DL_HASH}/jdk-${JAVA_VERSION}-linux-x64.tar.gz && \
  tar -xvf jdk-${JAVA_VERSION}-linux-x64.tar.gz && \
