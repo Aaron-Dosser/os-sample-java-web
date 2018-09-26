@@ -1,3 +1,5 @@
+FROM centos:centos7
+
 # Install prepare infrastructure
 RUN yum -y update && \
  yum -y install wget && \
